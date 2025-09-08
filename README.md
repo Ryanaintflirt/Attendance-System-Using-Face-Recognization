@@ -57,4 +57,4 @@ An AI-powered smart attendance system that uses **facial recognition** and **bli
 ---
 
 ## 🌐 Connect
-Made with ❤️ by [Bhavsar Meet] — [LinkedIn](https://linkedin.com/in/yourprofile) | [GitHub](https://github.com/MeetBhavsar2701)
+Made with ❤️ by [Bhavsar Meet] — [LinkedIn](https://www.linkedin.com/in/meet-bhavsar-b8b509272?) | [GitHub](https://github.com/MeetBhavsar2701)
