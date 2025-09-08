@@ -5,7 +5,7 @@ An AI-powered smart attendance system that uses **facial recognition** and **bli
 [![Python](https://img.shields.io/badge/Python-3.7%2B-blue?style=for-the-badge&logo=python)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Flask-2.0%2B-black?style=for-the-badge&logo=flask)](https://flask.palletsprojects.com/)
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.5%2B-blue?style=for-the-badge&logo=opencv)](https://opencv.org/)
-[![Face Recognition](https://img.shields.io/badge/Face_Recognition-1.3.0-lightgrey?style=for-the-badge)](https://github.com/ageitgey/face_recognition)
+[![Face Recognition](https://img.shields.io/badge/Face_Recognition-1.3.0-lightgrey?style=for-the-badge)](https://pypi.org/project/face-recognition/)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-3.5%2B-orange?style=for-the-badge&logo=matplotlib)](https://matplotlib.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0%2B-blue?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 
