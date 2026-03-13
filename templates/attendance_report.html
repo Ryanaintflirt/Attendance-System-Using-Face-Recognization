@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Attendance Report{% endblock %}
+
+{% block content %}
+<div class="card card-wide">
+  <h2 class="card-title">
+    <img src="{{ url_for('static', filename='to-do-list.gif') }}" alt="Report" class="card-icon" style="display:inline;width:40px;height:40px;vertical-align:middle;margin:0 0.5rem 0 0;" />
+    Attendance Report
+  </h2>
+
+  <!-- Attendance Table -->
+  <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          {% for col in header %}
+          <th>{{ col }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr>
+          {% for item in row %}
+          <td>{{ item }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Summary Cards -->
+  <div class="summary-grid">
+    <div class="summary-card total">
+      <div class="summary-label">🧮 Total Students</div>
+      <div class="summary-value">{{ summary['Total'] }}</div>
+    </div>
+    <div class="summary-card present">
+      <div class="summary-label">✅ Present</div>
+      <div class="summary-value">{{ summary['Present'] }}</div>
+    </div>
+    <div class="summary-card absent">
+      <div class="summary-label">🚫 Absent</div>
+      <div class="summary-value">{{ summary['Absent'] }}</div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:1.5rem;">
+    <a href="/" class="btn btn-primary" style="width:auto;display:inline-flex;">
+      <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+  </div>
+</div>
+{% endblock %}

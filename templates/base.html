@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Attendance System{% endblock %}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  {% block head %}{% endblock %}
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="/" class="navbar-brand">
+      <i class="fas fa-user-check"></i>
+      AttendanceAI
+    </a>
+    <ul class="navbar-links">
+      <li><a href="/" {% if request.path == '/' %}class="active"{% endif %}><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="/take_attendance" {% if request.path == '/take_attendance' %}class="active"{% endif %}><i class="fas fa-camera"></i> Attendance</a></li>
+      <li><a href="/view_analytics" {% if request.path == '/view_analytics' %}class="active"{% endif %}><i class="fas fa-chart-bar"></i> Analytics</a></li>
+    </ul>
+  </nav>
+
+  <!-- Flash Messages -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  <div class="flash-messages" style="padding-top:1rem;">
+    {% for category, message in messages %}
+    <div class="flash-msg {{ category }}">{{ message }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% endwith %}
+
+  <!-- Main Content -->
+  <main class="main-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; {{ now.year if now is defined else 2026 }} AttendanceAI &mdash; Face Recognition Attendance System
+  </footer>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>
